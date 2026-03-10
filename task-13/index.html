@@ -1,113 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            padding-top: 50px;
-        }
-
-        .kotak-form {
-            background-color: white;
-            padding: 30px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 500px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #003366;
-            margin-top: 0;
-        }
-
-        /* Mengatur agar tabel memenuhi lebar kotak */
-        table {
-            width: 100%;
-        }
-
-        /* Memberi jarak antar baris tabel */
-        td {
-            padding: 5px;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            box-sizing: border-box; /* Agar padding tidak merusak lebar input */
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-
-        .tombol-center {
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        button {
-            background-color: #3366ff;
-            color: white;
-            padding: 10px 50px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    </style>
+    <title>Employee Details Form</title>
 </head>
 <body>
 
-<div class="kotak-form">
-    <h2>Create Account</h2>
+    <div style="border: 1px solid black; padding: 20px; width: 500px;">
+        
+        <center><h2>Employee Details</h2></center>
 
-    <form>
-        <table>
-            <tr>
-                <td><input type="text" placeholder="First Name"></td>
-                <td><input type="text" placeholder="Last Name"></td>
-            </tr>
+        <form>
+            <b>01. Personal Information</b>
+            <hr>
+            <table>
+                <tr>
+                    <td>Employee Name *<br><input type="text" name="first_name"></td>
+                    <td>Last Name<br><input type="text" name="last_name"></td>
+                </tr>
+                <tr>
+                    <td>Starting Date<br><input type="date" name="starting_date"></td>
+                    <td>Birth Date<br><input type="date" name="birth_date"></td>
+                </tr>
+                <tr>
+                    <td>Employee Type<br>
+                        <select name="employee_type">
+                            <option value="">Select</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="part-time">Part-time</option>
+                        </select>
+                    </td>
+                    <td>Gender<br>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Position<br><input type="text" name="position" style="width: 95%;"></td>
+                </tr>
+            </table>
 
-            <tr>
-                <td colspan="2">
-                    <select>
-                        <option>Country</option>
-                        <option>Indonesia</option>
-                        <option>Japan</option>
-                        <option>South Korea</option>
-                        <option>China</option>
-                        <option>Other</option>
-                    </select>
-                </td>
-            </tr>
+            <br>
 
-            <tr>
-                <td><input type="email" placeholder="Email Address"></td>
-                <td><input type="text" placeholder="Phone Number"></td>
-            </tr>
+            <b>02. Location</b>
+            <hr>
+            <table border="0" width="100%">
+                <tr>
+                    <td>City<br><input type="text" name="city"></td>
+                    <td>State<br><input type="text" name="state"></td>
+                </tr>
+                <tr>
+                    <td>ZIP<br><input type="text" name="zip"></td>
+                    <td>Address<br>
+                        <textarea name="address" rows="3" style="width: 95%;"></textarea>
+                    </td>
+                </tr>
+            </table>
 
-            <tr>
-                <td><input type="password" placeholder="Password"></td>
-                <td><input type="password" placeholder="Confirm Password"></td>
-            </tr>
+            <br>
 
-            <tr>
-                <td colspan="2">
-                    <input type="checkbox" style="width: auto;"> 
-                    <label>Terms and Condition</label>
-                </td>
-            </tr>
+            <b>03. Contact Information</b>
+            <hr>
+            <table border="0" width="100%">
+                <tr>
+                    <td>Phone<br><input type="tel" name="phone"></td>
+                    <td>Email<br><input type="email" name="email"></td>
+                </tr>
+            </table>
 
-            <tr>
-                <td colspan="2" class="tombol-center">
-                    <button type="submit">Create</button>
-                </td>
-            </tr>
-        </table>
-    </form>
-</div>
+            <br>
+            <center>
+                <button type="submit">Register</button>
+            </center>
+        </form>
+    </div>
 
 </body>
 </html>
