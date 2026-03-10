@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrasi Sederhana - Tabel</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .kotak-form {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+            margin-top: 0;
+        }
+
+        /* Mengatur agar tabel memenuhi lebar kotak */
+        table {
+            width: 100%;
+        }
+
+        /* Memberi jarak antar baris tabel */
+        td {
+            padding: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box; /* Agar padding tidak merusak lebar input */
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        .tombol-center {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        button {
+            background-color: #3366ff;
+            color: white;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kotak-form">
+    <h2>Create Account</h2>
+
+    <form>
+        <table>
+            <tr>
+                <td><input type="text" placeholder="First Name"></td>
+                <td><input type="text" placeholder="Last Name"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <select>
+                        <option>Country</option>
+                        <option>Indonesia</option>
+                        <option>Japan</option>
+                        <option>South Korea</option>
+                        <option>China</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="email" placeholder="Email Address"></td>
+                <td><input type="text" placeholder="Phone Number"></td>
+            </tr>
+
+            <tr>
+                <td><input type="password" placeholder="Password"></td>
+                <td><input type="password" placeholder="Confirm Password"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" style="width: auto;"> 
+                    <label>Terms and Condition</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="tombol-center">
+                    <button type="submit">Create</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
